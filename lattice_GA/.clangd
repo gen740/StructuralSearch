@@ -1,0 +1,62 @@
+If:
+  PathMatch: .*\.metal
+
+CompileFlags:
+  Add:
+    - -nostdinc++
+    - -nostdinc
+    - -isystem/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include/c++/v1
+    - -isystem/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/metal/macos/lib/clang/32023.22/include/metal
+    - -isystem/Applications/Xcode-beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk/usr/include
+  CompilationDatabase: ./build
+  Compiler: /Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/metal/macos/bin/metal
+
+# ---
+#
+# CompileFlags:
+#   CompilationDatabase: ./build
+#
+# Diagnostics:
+#   UnusedIncludes: Strict
+#   ClangTidy:
+#     Add:
+#       - modernize*
+#       - bugprone*
+#       - google*
+#       - performance*
+#       - readability*
+#       - cppcoreguidelines*
+#     Remove:
+#       - bugprone-easily-swappable-parameters
+#       - cppcoreguidelines-avoid-c-arrays
+#       - cppcoreguidelines-avoid-magic-numbers
+#       - cppcoreguidelines-avoid-non-const-global-variables
+#       - cppcoreguidelines-init-variables
+#       - cppcoreguidelines-non-private-member-variables-in-classes
+#       - cppcoreguidelines-owning-memory
+#       - cppcoreguidelines-pro-bounds-array-to-pointer-decay
+#       - cppcoreguidelines-pro-bounds-constant-array-index
+#       - cppcoreguidelines-pro-bounds-pointer-arithmetic
+#       - cppcoreguidelines-pro-type-reinterpret-cast
+#       - cppcoreguidelines-pro-type-vararg
+#       - modernize-avoid-c-arrays
+#       - modernize-use-trailing-return-type
+#       - readability-convert-member-functions-to-static
+#       - readability-identifier-length
+#       - readability-identifier-naming
+#       - readability-isolate-declaration
+#       - readability-magic-numbers
+#       - readability-uppercase-literal-suffix
+#
+# InlayHints:
+#   Enabled: Yes
+#   ParameterNames: Yes
+#   DeducedTypes: Yes
+#
+# Hover:
+#   ShowAKA: Yes
+#
+# ---
+
+# /
+# vim:ft=yaml
